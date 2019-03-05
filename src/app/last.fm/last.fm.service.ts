@@ -16,7 +16,7 @@ export class LastFmService {
   init(): void {
     this.getRecentTracks();
     // Check every 20 seconds
-    window.setInterval(this.getRecentTracks, 20000);
+    window.setInterval(this.getRecentTracks.bind(this), 20000);
   }
 
   getRecentTracks(): void {
