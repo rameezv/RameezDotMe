@@ -1,1 +1,5 @@
-{{ recentTracks$ | async | json }}
+<ng-container *ngIf="latestTrack$ | async as latestTrack">
+  Latest track: {{ latestTrack.artist['#text'] }} - {{ latestTrack.name }}
+  <br />
+  Now playing? {{ isNowPlaying$ | async }}
+</ng-container>
