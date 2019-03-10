@@ -1,5 +1,6 @@
 <ng-container *ngIf="latestTrack$ | async as latestTrack">
-  <div class="latest-track" [ngClass]="{'now-playing': isNowPlaying$ | async}">
+  <h3>Latest Track</h3>
+  <div  matRipple matRippleColor="rgba(255,0,0,0.1)" class="latest-track" [ngClass]="{'now-playing': isNowPlaying$ | async}">
     <div class="album-art">
       <img [src]="latestTrack.image[latestTrack.image.length - 1]['#text']" />
     </div>
