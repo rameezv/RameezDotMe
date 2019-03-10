@@ -3,7 +3,11 @@
   <div  matRipple matRippleColor="rgba(255,0,0,0.1)" (click)="expandRecent = !expandRecent"
     class="latest-track" [ngClass]="{'now-playing': isNowPlaying$ | async, 'expanded': expandRecent}">
     <div class="album-art">
-      <img [src]="latestTrack.image[latestTrack.image.length - 1]['#text']" />
+      <img *ngIf="latestTrack.image[latestTrack.image.length - 1]['#text']; else noalbumart"
+      [src]="latestTrack.image[latestTrack.image.length - 1]['#text']" />
+      <ng-template #noalbumart>
+        <div class="no-album-art"><mat-icon>headset</mat-icon></div>
+      </ng-template>
     </div>
     <div class="track-info">
       <div class="artist">{{ latestTrack.artist['#text'] }}</div>
@@ -15,8 +19,8 @@
       <h3>Recently Played:</h3>
       <div *ngFor="let track of recentTracks" class="recent-track">
         <div class="album-art">
-          <img *ngIf="track.image[track.image.length - 1]['#text']; else noalbumart" [src]="track.image[track.image.length - 1]['#text']" />
-          <ng-template #noalbumart>
+          <img *ngIf="track.image[track.image.length - 1]['#text']; else noalbumartrecent" [src]="track.image[track.image.length - 1]['#text']" />
+          <ng-template #noalbumartrecent>
             <div class="no-album-art"><mat-icon>headset</mat-icon></div>
           </ng-template>
         </div>

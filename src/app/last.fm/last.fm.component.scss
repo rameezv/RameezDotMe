@@ -1,4 +1,4 @@
-@import './animations.scss';
+@import './_animations.scss';
 
 :host {
   display: flex;
@@ -29,7 +29,21 @@ h3 {
       height: 48px;
       width: 48px;
       border-radius: 48px;
-      border: 2px solid #666666;
+      border: 2px solid #333333;
+    }
+    .no-album-art {
+      background-color: #000000;
+      border: 2px solid #333333;
+      height: 48px;
+      width: 48px;
+      border-radius: 48px;
+      mat-icon {
+        color: #ff0000;
+        font-size: 36px;
+        height: 36px;
+        width: 36px;
+        margin: 6px;
+      }
     }
   }
   .track-info {
@@ -45,7 +59,7 @@ h3 {
   }
   &.now-playing {
     .album-art {
-      img {
+      img, .no-album-art {
         -webkit-animation: heartbeat 600ms ease-in-out infinite both;
 	      animation: heartbeat 600ms ease-in-out infinite both;
       }
