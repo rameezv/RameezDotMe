@@ -11,12 +11,17 @@ import { LastFmTrack } from './interfaces';
 })
 export class LastFmComponent implements OnInit {
   recentTracks$: Observable<LastFmTrack[]>;
+  recentlyPlayedTracks$: Observable<LastFmTrack[]>;
   latestTrack$: Observable<LastFmTrack>;
   isNowPlaying$: Observable<boolean>;
+  expandRecent = false;
 
   constructor(private lastFmService: LastFmService) {}
   ngOnInit(): void {
     this.recentTracks$ = this.lastFmService.recentTracks$;
+    this.recentlyPlayedTracks$ = this.recentTracks$.pipe(
+      map(tracks => tracks.filter((_, i) => i > 0))
+    );
     this.latestTrack$ = this.recentTracks$.pipe(
       map(tracks => tracks ? tracks[0] : null)
     );

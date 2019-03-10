@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { MatRippleModule } from '@angular/material';
+import { MatRippleModule, MatIconModule } from '@angular/material';
 import { LastFmComponent } from './last.fm.component';
 import { LastFmService } from './last.fm.service';
 
@@ -11,6 +11,7 @@ import { LastFmService } from './last.fm.service';
   ],
   imports: [
     MatRippleModule,
+    MatIconModule,
     CommonModule,
     HttpClientModule
   ],
