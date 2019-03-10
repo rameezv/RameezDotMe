@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Black'), local('ProductSans-Black'),
+      url('../assets/fonts/ProductSans-Black.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Black.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Italic'), local('ProductSans-Italic'),
+      url('../assets/fonts/ProductSans-Italic.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Italic.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Bold Italic'), local('ProductSans-BoldItalic'),
+      url('../assets/fonts/ProductSans-BoldItalic.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-BoldItalic.woff') format('woff'),
+      url('../assets/fonts/ProductSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans'), local('ProductSans-Regular'),
+      url('../assets/fonts/ProductSans-Regular.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Regular.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Light'), local('ProductSans-Light'),
+      url('../assets/fonts/ProductSans-Light.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Light.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Thin'), local('ProductSans-Thin'),
+      url('../assets/fonts/ProductSans-Thin.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Thin.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Bold'), local('ProductSans-Bold'),
+      url('../assets/fonts/ProductSans-Bold.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Bold.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Medium'), local('ProductSans-Medium'),
+      url('../assets/fonts/ProductSans-Medium.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Medium.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Thin'), local('ProductSans-Thin'),
+      url('../assets/fonts/ProductSans-Thin_1.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Thin_1.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Thin_1.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Medium'), local('ProductSans-Medium'),
+      url('../assets/fonts/ProductSans-Medium_1.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Medium_1.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Medium_1.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Bold'), local('ProductSans-Bold'),
+      url('../assets/fonts/ProductSans-Bold_1.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Bold_1.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Bold_1.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Bold Italic'), local('ProductSans-BoldItalic'),
+      url('../assets/fonts/ProductSans-BoldItalic_1.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-BoldItalic_1.woff') format('woff'),
+      url('../assets/fonts/ProductSans-BoldItalic_1.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Light'), local('ProductSans-Light'),
+      url('../assets/fonts/ProductSans-Light_1.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Light_1.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Light_1.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Italic'), local('ProductSans-Italic'),
+      url('../assets/fonts/ProductSans-Italic_1.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Italic_1.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Italic_1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans Black'), local('ProductSans-Black'),
+      url('../assets/fonts/ProductSans-Black_1.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Black_1.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Black_1.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans'), local('ProductSans-Regular'),
+      url('../assets/fonts/ProductSans-Regular_1.woff2') format('woff2'),
+      url('../assets/fonts/ProductSans-Regular_1.woff') format('woff'),
+      url('../assets/fonts/ProductSans-Regular_1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
