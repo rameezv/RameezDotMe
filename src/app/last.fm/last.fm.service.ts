@@ -7,7 +7,7 @@ import { LastFmTrack } from './interfaces';
 export class LastFmService {
   API_KEY = '27faee170fc87214923dfa18ea3624fc'; // TODO: secret this
   RECENT_TRACKS_URL =
-    `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=bigtreeworld&api_key=${this.API_KEY}&format=json&limit=10`;
+    `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=bigtreeworld&api_key=${this.API_KEY}&format=json&limit=10`;
 
   recentTracks$$: BehaviorSubject<LastFmTrack[]> = new BehaviorSubject([]);
 
