@@ -4,10 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatRippleModule, MatIconModule } from '@angular/material';
 import { LastFmComponent } from './last.fm.component';
 import { LastFmService } from './last.fm.service';
+import { EqComponent } from './equalizer.component';
 
 @NgModule({
   declarations: [
-    LastFmComponent
+    LastFmComponent,
+    EqComponent
   ],
   imports: [
     MatRippleModule,

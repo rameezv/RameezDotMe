@@ -22,7 +22,12 @@ h3 {
   height: 48px;
   border: 1px solid #222;
   min-width: 360px;
+  position: relative;
   cursor: pointer;
+  app-eq {
+    position: absolute;
+    bottom: 16px;
+  }
   .album-art {
     margin-right: 16px;
     img {
@@ -47,7 +52,8 @@ h3 {
     }
   }
   .track-info {
-    width: 100%;
+    width: calc(100% - 120px);
+    flex-grow: 1;
     .artist {
       font-weight: 300;
       text-transform: uppercase;
@@ -66,11 +72,14 @@ h3 {
       max-width: calc(100% - 120px);
     }
   }
+  .expand {
+    margin: 4px 8px 0 0;
+  }
   &.now-playing {
     .album-art {
       img, .no-album-art {
-        -webkit-animation: heartbeat 600ms ease-in-out infinite both;
-	      animation: heartbeat 600ms ease-in-out infinite both;
+        -webkit-animation: heartbeat 1000ms ease-in-out infinite both;
+	      animation: heartbeat 1000ms ease-in-out infinite both;
       }
     }
   }

@@ -2,6 +2,7 @@
   <h3>{{ (isNowPlaying$ | async) ? 'Now Playing:' : 'Latest Track:' }}</h3>
   <div  matRipple matRippleColor="rgba(255,0,0,0.1)" (click)="expandRecent = !expandRecent"
     class="latest-track" [ngClass]="{'now-playing': isNowPlaying$ | async, 'expanded': expandRecent}">
+    <app-eq *ngIf="isNowPlaying$ | async"></app-eq>
     <div class="album-art">
       <img *ngIf="latestTrack.image[latestTrack.image.length - 1]['#text']; else noalbumart"
       [src]="latestTrack.image[latestTrack.image.length - 1]['#text']" />
@@ -13,6 +14,7 @@
       <div class="artist">{{ latestTrack.artist['#text'] }}</div>
       <div class="name">{{ latestTrack.name }}</div>
     </div>
+    <div class="expand"><mat-icon>{{ expandRecent ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon></div>
   </div>
   <ng-container *ngIf="recentlyPlayedTracks$ | async as recentTracks">
     <div *ngIf="recentTracks.length > 1 && expandRecent" class="recently-played">
