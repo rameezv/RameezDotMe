@@ -100,6 +100,7 @@ h3 {
 
 .recently-played {
   height: 0;
+  max-height: 0;
   opacity: 0;
   width: 100%;
   padding: 8px;
@@ -109,11 +110,12 @@ h3 {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   width: calc(100% - 32px);
-  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out, height 0.2s ease-in-out, opacity 0.1s ease-in-out;
   &.visible {
     height: 100%;
+    max-height: 500px;
     opacity: 1;
-    transition: height 0.2s ease-in-out;
+    transition: max-height 0.2s ease-in-out, height 0.2s ease-in-out, opacity 0.5s ease-in-out;
   }
   h3 {
     font-weight: 400;
