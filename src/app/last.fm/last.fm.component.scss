@@ -47,6 +47,7 @@ h3 {
     }
   }
   .track-info {
+    width: 100%;
     .artist {
       font-weight: 300;
       text-transform: uppercase;
@@ -54,7 +55,7 @@ h3 {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      max-width: calc(100% - 240px);
+      max-width: calc(100% - 120px);
     }
     .name {
       font-weight: 600;
@@ -62,7 +63,7 @@ h3 {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      max-width: calc(100% - 240px);
+      max-width: calc(100% - 120px);
     }
   }
   &.now-playing {
@@ -105,9 +106,12 @@ h3 {
         width: 24px;
         height: 24px;
         border-radius: 24px;
+        border: 1px solid #000000;
       }
       .no-album-art {
         background-color: #000000;
+        border: 1px solid #000000;
+        border-radius: 24px;
         mat-icon {
           color: #ff0000;
           font-size: 20px;
