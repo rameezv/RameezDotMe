@@ -13,7 +13,16 @@
     justify-content: center;
     app-last-fm {
       display: flex;
-      max-width: 600px;
+      max-width: 560px;
+      min-width: 400px;
+      width: 100%;
+    }
+    img.profile-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 160px;
+      border: 5px solid #333333;
+      margin: 16px 0 0 0;
     }
   }
 

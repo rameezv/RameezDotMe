@@ -9,6 +9,11 @@ h3 {
   margin: 4px 36px;
   font-size: 16px;
   font-weight: 500;
+  mat-icon {
+    font-size: 12px;
+    height: 12px;
+    width: 16px;
+  }
 }
 
 .latest-track {
@@ -23,6 +28,7 @@ h3 {
   border: 1px solid #222;
   min-width: 360px;
   position: relative;
+  user-select: none;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   &:hover {
@@ -65,7 +71,7 @@ h3 {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      max-width: calc(100% - 120px);
+      max-width: calc(100% - 40px);
     }
     .name {
       font-weight: 600;
@@ -73,7 +79,7 @@ h3 {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      max-width: calc(100% - 120px);
+      max-width: calc(100% - 40px);
     }
   }
   .expand {
@@ -98,6 +104,7 @@ h3 {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
+  user-select: none;
   border-radius: 24px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
