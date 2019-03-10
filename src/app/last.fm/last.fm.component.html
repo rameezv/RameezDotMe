@@ -17,7 +17,7 @@
     <div class="expand"><mat-icon>{{ expandRecent ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon></div>
   </div>
   <ng-container *ngIf="recentlyPlayedTracks$ | async as recentTracks">
-    <div *ngIf="recentTracks.length > 1 && expandRecent" class="recently-played">
+    <div [ngClass]="{'visible': (recentTracks.length > 1 && expandRecent)}" class="recently-played">
       <h3>Recently Played:</h3>
       <div *ngFor="let track of recentTracks" class="recent-track">
         <div class="album-art">

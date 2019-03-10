@@ -24,6 +24,10 @@ h3 {
   min-width: 360px;
   position: relative;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: #222222;
+  }
   app-eq {
     position: absolute;
     bottom: 16px;
@@ -89,14 +93,21 @@ h3 {
 }
 
 .recently-played {
-  margin: 0 32px;
+  height: 0;
+  opacity: 0;
+  width: 100%;
   padding: 8px;
   box-sizing: border-box;
-  background-color: #000000;
   border-radius: 24px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  width: calc(100% - 64px);
+  width: calc(100% - 32px);
+  transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  &.visible {
+    height: 100%;
+    opacity: 1;
+    transition: height 0.2s ease-in-out;
+  }
   h3 {
     font-weight: 400;
     font-size: 14px;
@@ -109,6 +120,12 @@ h3 {
     background-color: #1a1a1a;
     border-radius: 24px;
     height: 24px;
+    width: 100%;
+    cursor: default;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: #222222;
+    }
     .album-art {
       margin-right: 16px;
       img, .no-album-art {

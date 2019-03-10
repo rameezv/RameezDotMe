@@ -6,8 +6,15 @@
   color: #eeeeee;
   margin: 8px 16px;
 
-  app-last-fm {
+  .header {
     display: flex;
-    max-width: 600px;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    app-last-fm {
+      display: flex;
+      max-width: 600px;
+    }
   }
+
 }
