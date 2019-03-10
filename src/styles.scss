@@ -9,3 +9,9 @@ html, body {
   color: #eeeeee;
 }
 
+.dark-panel {
+  mat-dialog-container {
+    background-color: #000000;
+  }
+}
+

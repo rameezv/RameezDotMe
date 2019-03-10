@@ -1,0 +1,17 @@
+<div class="projects">
+  <div *ngFor="let project of projects" class="project"
+    [style.background-image]="'linear-gradient(-10deg, ' + project.color2 + ', ' + project.color1 + ')'">
+    <div>
+      <h2>{{ project.name }}</h2>
+      <p>{{ project.description }}</p>
+    </div>
+    <div class="actions">
+      <ng-container *ngFor="let button of project.buttons">
+        <button mat-raised-button *ngIf="!button.isIconButton" [style.color]="project.color1"
+          (click)="button.action.call()">{{ button.textOrIcon }}</button>
+        <button mat-icon-button *ngIf="button.isIconButton" [style.color]="project.color1"
+          (click)="button.action.call()">{{ button.textOrIcon }}</button>
+      </ng-container>
+    </div>
+  </div>
+</div>
