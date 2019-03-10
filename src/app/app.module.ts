@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { MatButtonModule, MatIconModule, MatDialogModule } from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faGithubSquare, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 
 import { AppComponent } from './app.component';
@@ -36,6 +36,6 @@ const materialModules = [
 })
 export class AppModule {
   constructor() {
-    library.add(faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faEnvelopeSquare);
+    library.add(faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faEnvelopeSquare, faGithubSquare, faGitlab);
   }
 }

@@ -13,6 +13,8 @@ export class AppComponent {
     {name: 'Twitter', url: 'http://twitter.com/rameezv', faIcon: 'twitter-square', color: '#00aced'},
     {name: 'Instagram', url: 'http://instagram.com/rameezvirji', faIcon: 'instagram', color: '#C32AA3'},
     {name: 'LinkedIn', url: 'http://linkedin.com/in/rameezvirji', faIcon: 'linkedin', color: '#007bb6'},
+    {name: 'GitHub', url: 'http://github.com/rameezv', faIcon: 'github-square', color: '#fbc02d'},
+    {name: 'GitHub', url: 'http://gitlab.com/rameezv', faIcon: 'gitlab', color: '#ff5722'},
   ];
 
   openLink(url: string) {
