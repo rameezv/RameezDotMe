@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rameez-dot-me';
+
+  socialIcons: SocialIcon[] = [
+    {name: 'Facebook', url: 'http://facebook.com/rameezvirji', faIcon: 'facebook-square', color: '#3b5998'},
+    {name: 'Twitter', url: 'http://twitter.com/rameezv', faIcon: 'twitter-square', color: '#00aced'},
+    {name: 'Instagram', url: 'http://instagram.com/rameezvirji', faIcon: 'instagram', color: '#C32AA3'},
+    {name: 'LinkedIn', url: 'http://linkedin.com/in/rameezvirji', faIcon: 'linkedin', color: '#007bb6'},
+  ];
+
+  openLink(url: string) {
+    window.open(url, '_blank');
+  }
+}
+
+interface SocialIcon {
+  name: string;
+  url: string;
+  faIcon: string;
+  color: string;
 }

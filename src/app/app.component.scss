@@ -24,6 +24,23 @@
       border: 5px solid #333333;
       margin: 16px 0 0 0;
     }
+    .social-icons {
+      display: flex;
+      margin: 0 0 32px;
+      button {
+        font-size: 24px;
+        height: 48px;
+        width: 48px;
+        fa-icon {
+          filter: grayscale(100%) brightness(100);
+        }
+        &:hover {
+          fa-icon {
+            filter: brightness(1);
+          }
+        }
+      }
+    }
   }
 
 }

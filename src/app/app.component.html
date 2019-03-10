@@ -2,6 +2,11 @@
   <div class="header">
     <img src="../assets/images/rameez.jpg" class="profile-image" />
     <h1>Rameez M Virji</h1>
+    <div class="social-icons">
+      <button mat-icon-button *ngFor="let icon of socialIcons">
+        <fa-icon [icon]="['fab', icon.faIcon]" [style.color]="icon.color" (click)="openLink(icon.url)"></fa-icon>
+      </button>
+    </div>
     <app-last-fm></app-last-fm>
   </div>
 </div>
