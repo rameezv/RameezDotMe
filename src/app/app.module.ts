@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatIconModule, MatDialogModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatDialogModule, MatTooltipModule } from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faGithubSquare, faGitlab } from '@fortawesome/free-brands-svg-icons';
@@ -14,7 +14,8 @@ import { ProjectsComponent, YoutubeViewerDialogComponent } from './projects/proj
 const materialModules = [
   MatButtonModule,
   MatIconModule,
-  MatDialogModule
+  MatDialogModule,
+  MatTooltipModule
 ];
 
 @NgModule({
