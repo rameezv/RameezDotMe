@@ -1,4 +1,5 @@
-@import './webfonts.scss';
+@import './webfonts';
+@import './animations';
 
 .page {
   font-family: 'Product Sans', 'Montserrat', 'Verdana', 'Arial', sans-serif;
@@ -11,6 +12,12 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    h1 {
+      cursor: default;
+      &:hover {
+        animation: bounce 1s both;
+      }
+    }
     app-last-fm {
       display: flex;
       max-width: 560px;
