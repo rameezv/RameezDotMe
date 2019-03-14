@@ -3,7 +3,11 @@
   flex-flow: row wrap;
   margin-top: 32px;
   .project {
-    flex: 1 1 auto;
+    font-size: 18px;
+    flex: 1 0 200px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     min-width: 200px;
     min-height: 200px;
     background-color: black;
@@ -19,9 +23,13 @@
       opacity: 1;
     }
     .actions {
+      margin: 16px;
+      text-align: center;
       button {
         background-color: rgba(255,255,255,0.7);
         font-weight: 600;
+        font-size: 18px;
+        border-radius: 24px;
       }
     }
   }
