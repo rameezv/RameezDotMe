@@ -6,9 +6,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faGithubSquare, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+import { LastFmScrobblesModule } from 'angular-last-fm-scrobbles';
 
 import { AppComponent } from './app.component';
-import { LastFmModule } from './last.fm/last.fm.module';
 import { ProjectsComponent, YoutubeViewerDialogComponent } from './projects/projects.component';
 
 const materialModules = [
@@ -28,7 +28,7 @@ const materialModules = [
     BrowserModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    LastFmModule,
+    LastFmScrobblesModule,
     ...materialModules
   ],
   providers: [],

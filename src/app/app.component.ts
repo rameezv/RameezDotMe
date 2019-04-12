@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'rameez-dot-me';
 
+  lastFmApiKey = '27faee170fc87214923dfa18ea3624fc';
+
   socialIcons: SocialIcon[] = [
     {name: 'Facebook', url: 'http://facebook.com/rameezvirji', tooltip: 'rameezvirji', faIcon: 'facebook-square', color: '#3b5998'},
     {name: 'Twitter', url: 'http://twitter.com/rameezv', tooltip: '@rameezv', faIcon: 'twitter-square', color: '#00aced'},
