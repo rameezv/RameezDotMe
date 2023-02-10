@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatIconModule, MatDialogModule, MatTooltipModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faGithubSquare, faGitlab } from '@fortawesome/free-brands-svg-icons';
@@ -19,21 +22,20 @@ const materialModules = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProjectsComponent,
-    YoutubeViewerDialogComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FontAwesomeModule,
-    LastFmScrobblesModule,
-    ...materialModules
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [YoutubeViewerDialogComponent]
+    declarations: [
+        AppComponent,
+        ProjectsComponent,
+        YoutubeViewerDialogComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        FontAwesomeModule,
+        LastFmScrobblesModule,
+        ...materialModules
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor() {
