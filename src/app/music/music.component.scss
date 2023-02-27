@@ -5,6 +5,10 @@ last-fm-scrobbles {
 .playlists {
   display: flex;
   flex-flow: row nowrap;
+  overflow-y: hidden;
+  height: 100%;
+  max-height: 500px;
+  transition: height 0.2s, max-height 0.2s;
   .playlist {
     width: 100px;
     display: flex;
@@ -36,5 +40,25 @@ last-fm-scrobbles {
         margin: 0 4px;
       }
     }
+  }
+  &.collapsed {
+    height: 0;
+    max-height: 0;
+  }
+}
+
+.playlist-section {
+  font-family: 'Product Sans', 'Montserrat', 'Verdana', 'Arial', sans-serif;
+  width: 100%;
+  text-align: center;
+  button.playlist-expand-collapse {
+    font-family: 'Product Sans', 'Montserrat', 'Verdana', 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: normal;
+    color: #eee;
+    border-radius: 30px;
+    height: 30px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
