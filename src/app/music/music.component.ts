@@ -51,6 +51,12 @@ export class MusicComponent {
     ],
   }];
 
+  playlistsExpanded = false;
+
   constructor() {}
+
+  togglePlaylistsExpanded() {
+    this.playlistsExpanded = !this.playlistsExpanded;
+  }
 }
 
