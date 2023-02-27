@@ -5,6 +5,13 @@ enum Source {
   YOUTUBE,
 };
 
+interface Playlist {
+  name: string;
+  description: string;
+  image: string;
+  links: Array<{source: Source, url: string}>;
+}
+
 @Component({
   selector: 'app-music',
   templateUrl: './music.component.html',
@@ -13,9 +20,10 @@ enum Source {
 export class MusicComponent {
   lastFmApiKey = '27faee170fc87214923dfa18ea3624fc';
   sourceEnum = Source;
-  playlists = [{
+  playlists: Playlist[] = [{
     name: 'Eternals',
     image: 'eternals.jpg',
+    description: 'My All-Time Favourite Tracks',
     links: [
       {
         source: Source.SPOTIFY,
