@@ -34,7 +34,23 @@ export class MusicComponent {
         url: 'https://www.youtube.com/playlist?list=PL1gAn00oLKEOL3Mh4-hak_FtFtoH5l2Pv',
       },
     ],
+  },
+  {
+    name: 'The Good S**t Compendium',
+    image: 'the-good-shit-compendium.jpg',
+    description: 'All of my music in one giant playlist',
+    links: [
+      {
+        source: Source.SPOTIFY,
+        url: 'https://open.spotify.com/playlist/2cinh5jEpl4oPiJah2nEJS?si=3853e6e0e13344b4',
+      },
+      {
+        source: Source.YOUTUBE,
+        url: 'https://www.youtube.com/playlist?list=PL1gAn00oLKEN5BTOOtAIU27UQ6phDiStP',
+      },
+    ],
   }];
+
   constructor() {}
 }
 
