@@ -1,6 +1,6 @@
 <last-fm-scrobbles username="bigtreeworld" [apiKey]="lastFmApiKey"></last-fm-scrobbles>
 
-<div>
+<div class="playlists">
   <div *ngFor="let playlist of playlists" class="playlist">
     <img [src]="'/assets/images/playlist-covers/' + playlist.image" class="playlist-image" [alt]="playlist.name" />
     <div class="info">
