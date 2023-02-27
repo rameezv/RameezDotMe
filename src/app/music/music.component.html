@@ -7,12 +7,17 @@
       <b>{{playlist.name}}</b>
       <div>{{playlist.description}}</div>
     </div>
-    <ng-container *ngFor="let link of playlist.links">
-      <div [ngSwitch]="link.source" class="link">
-        <a [href]="link.url" target="_blank">
-          <fa-icon *ngSwitchCase="sourceEnum.SPOTIFY" [icon]="['fab', 'spotify']" [style.color]="'#1DB954'"></fa-icon>
+    <div class="links">
+      <ng-container *ngFor="let link of playlist.links">
+      <ng-container [ngSwitch]="link.source">
+        <a [href]="link.url" target="_blank" *ngSwitchCase="sourceEnum.SPOTIFY" >
+          <fa-icon [icon]="['fab', 'spotify']" [style.color]="'#1DB954'"></fa-icon>
         </a>
-      </div>
-    </ng-container>
+        <a [href]="link.url" target="_blank" *ngSwitchCase="sourceEnum.YOUTUBE" >
+          <fa-icon [icon]="['fab', 'youtube-square']" [style.color]="'#FF0000'"></fa-icon>
+        </a>
+      </ng-container>
+      </ng-container>
+    </div>
   </div>
 </div>

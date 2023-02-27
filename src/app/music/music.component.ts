@@ -29,6 +29,10 @@ export class MusicComponent {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/6TIgaUP8RANUKZb6EuEbAC?si=b0dedcec49644af1',
       },
+      {
+        source: Source.YOUTUBE,
+        url: 'https://www.youtube.com/playlist?list=PL1gAn00oLKEOL3Mh4-hak_FtFtoH5l2Pv',
+      },
     ],
   }];
   constructor() {}

@@ -20,7 +20,10 @@ last-fm-scrobbles {
       padding: 4px;
     }
   }
-  .link {
+  .links {
     font-size: 22px;
+    a {
+      margin: 0 4px;
+    }
   }
 }
