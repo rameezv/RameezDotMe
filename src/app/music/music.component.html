@@ -3,6 +3,10 @@
 <div>
   <div *ngFor="let playlist of playlists" class="playlist">
     <img [src]="'/assets/images/playlist-covers/' + playlist.image" class="playlist-image" [alt]="playlist.name" />
+    <div class="info">
+      <b>{{playlist.name}}</b>
+      <div>{{playlist.description}}</div>
+    </div>
     <ng-container *ngFor="let link of playlist.links">
       <div [ngSwitch]="link.source" class="link">
         <a [href]="link.url" target="_blank">

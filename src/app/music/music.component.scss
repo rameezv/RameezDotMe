@@ -12,6 +12,14 @@ last-fm-scrobbles {
     max-width: 100px;
     border-radius: 8px;
   }
+  .info {
+    font-size: 14px;
+    margin-bottom: 8px;
+    div {
+      font-size: 10px;
+      padding: 4px;
+    }
+  }
   .link {
     font-size: 22px;
   }
