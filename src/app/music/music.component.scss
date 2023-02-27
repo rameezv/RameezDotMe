@@ -1,0 +1,18 @@
+last-fm-scrobbles {
+  overflow-y: hidden;
+}
+
+.playlist {
+  width: 100px;
+  text-align: center;
+  padding: 4px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  img.playlist-image {
+    max-width: 100px;
+    border-radius: 8px;
+  }
+  .link {
+    font-size: 22px;
+  }
+}

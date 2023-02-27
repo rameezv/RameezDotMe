@@ -7,12 +7,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faGithubSquare, faGitlab } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faGithubSquare, faGitlab, faSpotify } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import { LastFmScrobblesModule } from 'angular-last-fm-scrobbles';
 
 import { AppComponent } from './app.component';
 import { ProjectsComponent, YoutubeViewerDialogComponent } from './projects/projects.component';
+import { MusicComponent } from './music/music.component';
 
 const materialModules = [
   MatButtonModule,
@@ -25,7 +26,8 @@ const materialModules = [
     declarations: [
         AppComponent,
         ProjectsComponent,
-        YoutubeViewerDialogComponent
+        YoutubeViewerDialogComponent,
+        MusicComponent,
     ],
     imports: [
         BrowserModule,
@@ -39,6 +41,6 @@ const materialModules = [
 })
 export class AppModule {
   constructor() {
-    library.add(faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faEnvelopeSquare, faGithubSquare, faGitlab);
+    library.add(faFacebookSquare, faTwitterSquare, faInstagram, faLinkedin, faEnvelopeSquare, faGithubSquare, faGitlab, faSpotify);
   }
 }
