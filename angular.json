@@ -117,5 +117,8 @@
       }
     }
   },
-  "defaultProject": "rameez-dot-me"
+  "defaultProject": "rameez-dot-me",
+  "cli": {
+    "analytics": false
+  }
 }
