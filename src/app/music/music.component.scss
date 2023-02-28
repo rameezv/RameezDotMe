@@ -3,8 +3,9 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: stretch;
-  overflow-y: hidden;
+  overflow-y: scroll;
   height: 100%;
+  max-height: 800px;
   transition: height 0.2s, max-height 0.2s;
   max-width: 820px;
   .playlist {
@@ -64,6 +65,7 @@
   &.collapsed {
     height: 0;
     max-height: 0;
+    overflow-y: hidden;
   }
 }
 
