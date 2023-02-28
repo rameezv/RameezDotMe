@@ -1,0 +1,9 @@
+<div class="dialog-content">
+  <img [src]="'/assets/images/art/' + data.artId + '.jpg'" />
+  <div class="info" *ngIf="artInfo">
+    <h3>{{ artInfo.name }}</h3>
+    <h4>{{ artInfo.medium }}</h4>
+    <h5>{{ artInfo.date | date : mediumDate }}</h5>
+    <p>{{ artInfo.description }}</p>
+  </div>
+</div>

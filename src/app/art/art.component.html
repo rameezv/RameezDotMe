@@ -1,0 +1,6 @@
+<h2>Art by Meezy</h2>
+<div class="gallery">
+  <div *ngFor="let art of arts.reverse()" class="art" (click)="openArtDialog(art)">
+    <img [src]="'/assets/images/art/' + art + '.jpg'" />
+  </div>
+</div>
