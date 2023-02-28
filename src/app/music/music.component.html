@@ -17,6 +17,9 @@
             <a [href]="link.url" target="_blank" *ngSwitchCase="sourceEnum.YOUTUBE" >
               <fa-icon [icon]="['fab', 'youtube-square']" [style.color]="'#FF0000'"></fa-icon>
             </a>
+            <a [href]="link.url" target="_blank" *ngSwitchCase="sourceEnum.APPLE" >
+              <fa-icon [icon]="['fab', 'apple']" [style.color]="'#f94c57'"></fa-icon>
+            </a>
           </ng-container>
         </ng-container>
       </div>
