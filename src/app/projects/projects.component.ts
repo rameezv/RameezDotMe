@@ -86,9 +86,6 @@ export class ProjectsComponent {
   `,
   styles: [
     `iframe {
-      margin: -24px;
-      width: calc(100% + 48px);
-      height: calc(100% + 44px);
       overflow: hidden;
     }`
   ]
