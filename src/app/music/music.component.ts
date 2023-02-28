@@ -3,6 +3,7 @@ import { Component, Inject } from '@angular/core';
 enum Source {
   SPOTIFY,
   YOUTUBE,
+  APPLE,
 };
 
 interface Playlist {
@@ -31,6 +32,10 @@ export class MusicComponent {
         source: Source.YOUTUBE,
         url: 'https://www.youtube.com/playlist?list=PL1gAn00oLKEOL3Mh4-hak_FtFtoH5l2Pv',
       },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/eternals/pl.u-kv9l2BmF7kzgPq3',
+      },
     ],
   },
   {
@@ -40,6 +45,10 @@ export class MusicComponent {
       {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/3J1QQTd5EssfGey5QntaBm?si=3118f3e755994193',
+      },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/the-hip-hop-collection/pl.u-gxblgJ7C5LYqmVR',
       },
     ],
   },
@@ -51,6 +60,10 @@ export class MusicComponent {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/7svU1ezGJeDqig6DYMfzbB?si=7348706bb6654295',
       },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/the-r-b-reggae-collection/pl.u-KVXBkXVCZk485Me',
+      },
     ],
   },
   {
@@ -60,6 +73,10 @@ export class MusicComponent {
       {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/4BWjQhg8aCc4KvNILri5fj?si=8c61efd351be438c',
+      },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/the-jazz-and-soul-collection/pl.u-2aoq8ybtN1RKrBb',
       },
     ],
   },
@@ -71,6 +88,10 @@ export class MusicComponent {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/3X5FFAnR2XW2hJubx47EIx?si=29f929b2e7ac4c33',
       },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/the-mineral-collection/pl.u-kv9l2aaI7kzgPq3',
+      },
     ],
   },
   {
@@ -80,6 +101,10 @@ export class MusicComponent {
       {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/012NAo5qCEFi3snpGOaElw?si=a13d991d3bc74fe1',
+      },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/the-classic-collection/pl.u-xlyNE3Vsk1xYzR7',
       },
     ],
   },
@@ -91,6 +116,10 @@ export class MusicComponent {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/2jayWXdbaFsWZL5v0ftnMZ?si=b27fcfc7a5904f2a',
       },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/the-edm-collection/pl.u-xlyNEmNsk1xYzR7',
+      },
     ],
   },
   {
@@ -100,6 +129,10 @@ export class MusicComponent {
       {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/3SulUEqrXVulAG0pusqmJ7?si=e20748c225e14c6f',
+      },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/the-chillectric-collection/pl.u-KVXBkPLtZk485Me',
       },
     ],
   },
@@ -111,6 +144,10 @@ export class MusicComponent {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/7810pCrQSNfd6AhxdHOVuw?si=7482f1e203c9457a',
       },
+      {
+        source: Source.APPLE,
+        url: '',
+      },
     ],
   },
   {
@@ -120,6 +157,10 @@ export class MusicComponent {
       {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/3UXxCZ52GV2fk3QzfnZFE8?si=f5474be5dc0b482d',
+      },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/tandoori-tunes/pl.u-8aAVXd6Cogl8xRe',
       },
     ],
   },
@@ -131,6 +172,10 @@ export class MusicComponent {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/5r1cuSZZPsEOFF7Kun9Jbu?si=f86576eccfcb4785',
       },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/shortcut-to-mushrooms/pl.u-WabZv4AcdjJb63k',
+      },
     ],
   },
   {
@@ -140,6 +185,10 @@ export class MusicComponent {
       {
         source: Source.SPOTIFY,
         url: 'https://open.spotify.com/playlist/5Cha8j9aoXB7rwBvw9ZJww?si=d0510f63fc604993',
+      },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/world-language-tour/pl.u-KVXBk1GIZk485Me',
       },
     ],
   },
@@ -154,6 +203,10 @@ export class MusicComponent {
       {
         source: Source.YOUTUBE,
         url: 'https://www.youtube.com/playlist?list=PL1gAn00oLKEN5BTOOtAIU27UQ6phDiStP',
+      },
+      {
+        source: Source.APPLE,
+        url: 'https://music.apple.com/ca/playlist/the-good-shit-compendium/pl.u-oZylD0aFRMbzYEy',
       },
     ],
   }];
