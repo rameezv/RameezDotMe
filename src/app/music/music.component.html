@@ -4,7 +4,6 @@
   <button class="playlist-expand-collapse" (click)="togglePlaylistsExpanded()" mat-button><span>Browse my playlists</span><mat-icon>{{ playlistsExpanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon></button>
   <div class="playlists" [ngClass]="{'collapsed': !playlistsExpanded}">
     <div *ngFor="let playlist of playlists" class="playlist">
-      <img [src]="'/assets/images/playlist-covers/' + playlist.image" class="playlist-image" [alt]="playlist.name" />
       <div class="info">
         <b>{{playlist.name}}</b>
         <div>{{playlist.description}}</div>
@@ -21,6 +20,12 @@
           </ng-container>
         </ng-container>
       </div>
+    </div>
+    <div class="playlist more">
+      <a href="https://open.spotify.com/user/rameezv?si=b6d891c760424c9c" target="_blank">
+        <fa-icon [icon]="['fab', 'spotify']" [style.color]="'#1DB954'"></fa-icon>
+        <div>See more playlists on my<br /><b>Spotify Profile</b></div>
+      </a>
     </div>
   </div>
 </div>
