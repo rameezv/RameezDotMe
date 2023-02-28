@@ -18,12 +18,20 @@
         animation: bounce 1s both;
       }
     }
-    img.profile-image {
-      width: 160px;
-      height: 160px;
+    .profile-image {
+      position: relative;
+      background: linear-gradient(to bottom, rgba(214,46,46,1) 0%, rgba(195,102,255,1) 40%, rgba(0,179,255,1) 80%, rgba(0,255,130,1) 100%);
       border-radius: 160px;
-      border: 5px solid #333333;
+      width: 166px;
+      height: 166px;
       margin: 16px 0 0 0;
+      img {
+        width: 160px;
+        height: 160px;
+        border-radius: 160px;
+        border: 0px solid #333333;
+        margin: 3px;
+      }
     }
     .social-icons {
       display: flex;
