@@ -1,6 +1,8 @@
 <div class="page">
   <div class="header">
-    <img src="../assets/images/rameez.jpg" class="profile-image" />
+    <div class="profile-image">
+      <img src="../assets/images/rameez.jpg" />
+    </div>
     <h1>Rameez M Virji</h1>
     <div class="social-icons">
       <button mat-icon-button *ngFor="let icon of socialIcons" (click)="openLink(icon.url)" [matTooltip]="icon.tooltip">
