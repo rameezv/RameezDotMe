@@ -75,7 +75,7 @@ h2 {
   a {
     display: flex;
     justify-content: center;
-  align-items: center;
+    align-items: center;
     &:link, &:visited {
       text-decoration: none;
       color: #ffffff;
@@ -110,6 +110,8 @@ h2 {
       border-radius: 12px;
       border: 4px solid #333;
       min-height: $gallery-image-size;
+      object-fit: contain;
+      object-position: center center;
     }
     button.collapse-info {
       height: 24px;
