@@ -13,7 +13,6 @@ import { LastFmScrobblesModule } from 'angular-last-fm-scrobbles';
 
 import { AppComponent } from './app.component';
 import { ProjectsComponent, YoutubeViewerDialogComponent } from './projects/projects.component';
-import { ArtComponent, ArtDialogComponent } from './art/art.component';
 import { MusicComponent } from './music/music.component';
 
 const materialModules = [
@@ -27,10 +26,8 @@ const materialModules = [
     declarations: [
         AppComponent,
         ProjectsComponent,
-        ArtDialogComponent,
         YoutubeViewerDialogComponent,
         MusicComponent,
-        ArtComponent,
     ],
     imports: [
         BrowserModule,
