@@ -1,0 +1,31 @@
+<last-fm-scrobbles username="bigtreeworld" [apiKey]="lastFmApiKey"></last-fm-scrobbles>
+
+<div class="playlist-section">
+  <button class="playlist-expand-collapse" (click)="togglePlaylistsExpanded()" mat-button><span>Browse my playlists</span><mat-icon>{{ playlistsExpanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon></button>
+  <div class="playlists" [ngClass]="{'collapsed': !playlistsExpanded}">
+    <div *ngFor="let playlist of playlists" class="playlist">
+      <div class="info">
+        <b>{{playlist.name}}</b>
+        <div>{{playlist.description}}</div>
+      </div>
+      <div class="links">
+        <ng-container *ngFor="let link of playlist.links">
+          <ng-container [ngSwitch]="link.source">
+            <a [href]="link.url" target="_blank" *ngSwitchCase="sourceEnum.SPOTIFY" >
+              <fa-icon [icon]="['fab', 'spotify']" [style.color]="'#1DB954'"></fa-icon>
+            </a>
+            <a [href]="link.url" target="_blank" *ngSwitchCase="sourceEnum.YOUTUBE" >
+              <fa-icon [icon]="['fab', 'youtube-square']" [style.color]="'#FF0000'"></fa-icon>
+            </a>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+    <div class="playlist more">
+      <a href="https://open.spotify.com/user/rameezv?si=b6d891c760424c9c" target="_blank">
+        <fa-icon [icon]="['fab', 'spotify']" [style.color]="'#1DB954'"></fa-icon>
+        <div>See more playlists on my<br /><b>Spotify Profile</b></div>
+      </a>
+    </div>
+  </div>
+</div>
