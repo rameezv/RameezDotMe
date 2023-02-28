@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 
@@ -48,7 +48,7 @@ export class ArtComponent {
   openArtDialog(artId: string) {
     this.dialog.open(ArtDialogComponent, {
       height: '90%',
-      width: '90%',
+      width: '100%',
       panelClass: 'dark-panel-translucent',
       data: {artId, allIds: this.arts}
     })
@@ -83,6 +83,7 @@ export class ArtDialogComponent {
   artInfo: ArtInfo;
   allIds: string[] = [];
   currentArtId: string;
+  infoCollapsed = false;
 
   constructor(
     public dialogRef: MatDialogRef<ArtDialogComponent>,
@@ -115,6 +116,7 @@ export class ArtDialogComponent {
     }
   }
 
+  @HostListener('document:keydown', ['$event'])
   handleKeypress(event) {
     if (event.code === 'ArrowLeft') {
       this.navigateGallery(false);
