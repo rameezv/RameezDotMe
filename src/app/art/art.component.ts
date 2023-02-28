@@ -41,16 +41,28 @@ export class ArtComponent {
     '2022-11-05-herald-of-the-dawn',
     '2023-02-23-tous-les-memes',
     '2023-02-28-meezy-self-portrait',
-  ];
+  ].reverse();
 
   constructor(public dialog: MatDialog) {}
 
   openArtDialog(artId: string) {
     this.dialog.open(ArtDialogComponent, {
       height: '90%',
+      width: '90%',
       panelClass: 'dark-panel-translucent',
-      data: {artId}
+      data: {artId, allIds: this.arts}
     })
+  }
+
+  scrollGallery(forward = true) {
+    const multiplier = forward ? 1 : -1;
+    const gallery = document.getElementById('gallery');
+    const leftJ = gallery.scrollLeft + ((3 * gallery.offsetWidth / 4) * multiplier);
+    const left = Math.round(leftJ / 212) * 212;
+    gallery.scroll({
+      left,
+      behavior: "smooth",
+    });
   }
 }
 
@@ -69,19 +81,46 @@ interface ArtInfo {
 export class ArtDialogComponent {
   URL_PREFIX = '/assets/images/art/';
   artInfo: ArtInfo;
+  allIds: string[] = [];
+  currentArtId: string;
 
   constructor(
     public dialogRef: MatDialogRef<ArtDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: {artId: string},
+    @Inject(MAT_DIALOG_DATA) public data: {artId: string, allIds: string[]},
     private http: HttpClient) {
-      const url = `${this.URL_PREFIX}${data.artId}.json`;
-      this.http.get(url).subscribe(jsonData => {
-        this.artInfo = jsonData as ArtInfo;
-      });
+      this.allIds = data.allIds;
+      this.currentArtId = data.artId;
+      this.loadArt();
     }
+
+  loadArt() {
+    const url = `${this.URL_PREFIX}${this.currentArtId}.json`;
+    this.http.get(url).subscribe(jsonData => {
+      this.artInfo = jsonData as ArtInfo;
+    });
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
   }
 
+  navigateGallery(forward = true) {
+    const currentIndex = this.allIds.indexOf(this.currentArtId);
+    if (forward && currentIndex < this.allIds.length - 1) {
+      this.currentArtId = this.allIds[currentIndex + 1];
+      this.loadArt();
+    } else if (!forward && currentIndex > 0) {
+      this.currentArtId = this.allIds[currentIndex - 1];
+      this.loadArt();
+    }
+  }
+
+  handleKeypress(event) {
+    if (event.code === 'ArrowLeft') {
+      this.navigateGallery(false);
+    }
+    if (event.code === 'ArrowRight') {
+      this.navigateGallery(true);
+    }
+  }
 }

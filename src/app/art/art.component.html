@@ -1,6 +1,10 @@
 <h2>Art by Meezy</h2>
-<div class="gallery">
-  <div *ngFor="let art of arts.reverse()" class="art" (click)="openArtDialog(art)">
-    <img [src]="'/assets/images/art/' + art + '.jpg'" />
+<div class="gallery-wrapper">
+  <button mat-icon-button (click)="scrollGallery(false)"><mat-icon>arrow_back_ios</mat-icon></button>
+  <div id="gallery">
+    <div *ngFor="let art of arts" class="art" (click)="openArtDialog(art)">
+      <img [src]="'/assets/images/art/' + art + '.jpg'" />
+    </div>
   </div>
+  <button mat-icon-button (click)="scrollGallery(true)"><mat-icon>arrow_forward_ios</mat-icon></button>
 </div>
