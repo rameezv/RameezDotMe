@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { LAST_FM_API_KEY, SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '../../api_keys';
 
 enum Source {
   SPOTIFY,
@@ -18,7 +19,9 @@ interface Playlist {
   styleUrls: ['./music.component.scss']
 })
 export class MusicComponent {
-  lastFmApiKey = '27faee170fc87214923dfa18ea3624fc';
+  lastFmApiKey = LAST_FM_API_KEY;
+  spotifyClientId = SPOTIFY_CLIENT_ID;
+  spotifyClientSecret = SPOTIFY_CLIENT_SECRET;
   sourceEnum = Source;
   playlists: Playlist[] = [{
     name: 'Eternals',
