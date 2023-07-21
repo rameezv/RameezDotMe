@@ -84,7 +84,7 @@ export class ArtDialogComponent {
   artInfo: ArtInfo;
   allIds: string[] = [];
   currentArtId: string;
-  infoCollapsed = false;
+  infoCollapsed = true;
 
   constructor(
     public dialogRef: MatDialogRef<ArtDialogComponent>,

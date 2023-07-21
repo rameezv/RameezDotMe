@@ -3,16 +3,26 @@
     <mat-icon>arrow_back_ios</mat-icon>
   </button>
   <div class="dialog-content">
-    <img [src]="'/assets/images/art/' + currentArtId + '.jpg'" />
-    <button
-      mat-icon-button
-      (click)="infoCollapsed = !infoCollapsed"
-      class="collapse-info"
-    >
-      <mat-icon *ngIf="!infoCollapsed">expand_more</mat-icon>
-      <mat-icon *ngIf="infoCollapsed">expand_less</mat-icon>
-    </button>
+    <div class="gallery-image">
+      <img [src]="'/assets/images/art/' + currentArtId + '.jpg'" />
+    </div>
     <div class="info" *ngIf="artInfo" [ngClass]="{ collapsed: infoCollapsed }">
+      <button
+        mat-raised-button
+        (click)="infoCollapsed = !infoCollapsed"
+        class="collapse-info"
+      >
+        <div class="icon-text">
+          <ng-container *ngIf="!infoCollapsed">
+            <mat-icon>expand_more</mat-icon>
+            <span>Description</span>
+          </ng-container>
+          <ng-container *ngIf="infoCollapsed">
+            <mat-icon>expand_less</mat-icon>
+            <span>Description</span>
+          </ng-container>
+        </div>
+      </button>
       <h3>{{ artInfo.name }}</h3>
       <h4>{{ artInfo.medium }}</h4>
       <h5>{{ artInfo.date | date : mediumDate }}</h5>
