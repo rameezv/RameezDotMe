@@ -129,6 +129,9 @@ h2 {
       h4 {font-style: italic; font-weight: 200; font-size: 12px;}
       h5 {font-weight: 200; font-size: 12px}
       p {margin: 12px 0 0}
+      p.description {
+        white-space: pre-line;
+      }
       &.collapsed {
         height: 0;
         max-height: 0;

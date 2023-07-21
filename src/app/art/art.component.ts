@@ -41,6 +41,7 @@ export class ArtComponent {
     '2022-11-05-herald-of-the-dawn',
     '2023-02-23-tous-les-memes',
     '2023-02-28-meezy-self-portrait',
+    '2023-07-20-people-of-the-concrete-jungle',
   ].reverse();
 
   constructor(public dialog: MatDialog) {}

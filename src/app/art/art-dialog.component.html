@@ -1,17 +1,25 @@
 <div class="dialog-wrapper">
-  <button mat-icon-button class="dialog-nav" (click)="navigateGallery(false)"><mat-icon>arrow_back_ios</mat-icon></button>
-  <div class="dialog-content">
-  <img [src]="'/assets/images/art/' + currentArtId + '.jpg'" />
-  <button mat-icon-button (click)="infoCollapsed = !infoCollapsed" class="collapse-info">
-    <mat-icon *ngIf="!infoCollapsed">expand_more</mat-icon>
-    <mat-icon *ngIf="infoCollapsed">expand_less</mat-icon>
+  <button mat-icon-button class="dialog-nav" (click)="navigateGallery(false)">
+    <mat-icon>arrow_back_ios</mat-icon>
   </button>
-  <div class="info" *ngIf="artInfo" [ngClass]="{'collapsed': infoCollapsed}">
-    <h3>{{ artInfo.name }}</h3>
-    <h4>{{ artInfo.medium }}</h4>
-    <h5>{{ artInfo.date | date : mediumDate }}</h5>
-    <p>{{ artInfo.description }}</p>
+  <div class="dialog-content">
+    <img [src]="'/assets/images/art/' + currentArtId + '.jpg'" />
+    <button
+      mat-icon-button
+      (click)="infoCollapsed = !infoCollapsed"
+      class="collapse-info"
+    >
+      <mat-icon *ngIf="!infoCollapsed">expand_more</mat-icon>
+      <mat-icon *ngIf="infoCollapsed">expand_less</mat-icon>
+    </button>
+    <div class="info" *ngIf="artInfo" [ngClass]="{ collapsed: infoCollapsed }">
+      <h3>{{ artInfo.name }}</h3>
+      <h4>{{ artInfo.medium }}</h4>
+      <h5>{{ artInfo.date | date : mediumDate }}</h5>
+      <p class="description">{{ artInfo.description }}</p>
+    </div>
   </div>
-</div>
-<button mat-icon-button class="dialog-nav" (click)="navigateGallery(true)"><mat-icon>arrow_forward_ios</mat-icon></button>
+  <button mat-icon-button class="dialog-nav" (click)="navigateGallery(true)">
+    <mat-icon>arrow_forward_ios</mat-icon>
+  </button>
 </div>
