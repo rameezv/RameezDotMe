@@ -5,11 +5,26 @@
     </div>
     <h1>Rameez M Virji</h1>
     <div class="social-icons">
-      <button mat-icon-button *ngFor="let icon of socialIcons" (click)="openLink(icon.url)" [matTooltip]="icon.tooltip">
-        <fa-icon [icon]="['fab', icon.faIcon]" [style.color]="icon.color"></fa-icon>
+      <button
+        mat-icon-button
+        *ngFor="let icon of socialIcons"
+        (click)="openLink(icon.url)"
+        [matTooltip]="icon.tooltip"
+      >
+        <fa-icon
+          [icon]="['fab', icon.faIcon]"
+          [style.color]="icon.color"
+        ></fa-icon>
       </button>
-      <button mat-icon-button (click)="openLink('mailto:rameez@bigtreeworld.com')" matTooltip="rameez@bigtreeworld.com">
-        <fa-icon [icon]="['fas', 'envelope-square']" style="color: #DB4437"></fa-icon>
+      <button
+        mat-icon-button
+        (click)="openLink('mailto:rameez@bigtreeworld.com')"
+        matTooltip="rameez@bigtreeworld.com"
+      >
+        <fa-icon
+          [icon]="['fas', 'envelope-square']"
+          style="color: #db4437"
+        ></fa-icon>
       </button>
     </div>
     <app-music></app-music>
@@ -17,6 +32,7 @@
   <app-art></app-art>
   <app-projects></app-projects>
   <div class="footer">
-    &copy; Copyright 2012-2023 Rameez Virji. All rights reserved. Every single one.
+    &copy; Copyright 2012-2023 Rameez Virji. All rights reserved. Every single
+    one.
   </div>
 </div>
