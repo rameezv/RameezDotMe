@@ -61,8 +61,4 @@
 
 app-music {
   max-width: 100%;
-  @media screen and (max-width: 500px) {
-    max-width: 480px;
-    overflow-x:scroll;
-  }
 }
