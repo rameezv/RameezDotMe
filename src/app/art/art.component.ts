@@ -42,6 +42,7 @@ export class ArtComponent {
     '2023-02-23-tous-les-memes',
     '2023-02-28-meezy-self-portrait',
     '2023-07-20-people-of-the-concrete-jungle',
+    '2023-07-21-galactic-meez',
   ].reverse();
 
   constructor(public dialog: MatDialog) {}
