@@ -27,7 +27,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
-    "angular-last-fm-scrobbles": "^8.4.0",
+    "angular-last-fm-scrobbles": "^9.0.1",
     "core-js": "^2.5.4",
     "firebase": "^6.1.1",
     "node-gyp": "^9.3.1",
