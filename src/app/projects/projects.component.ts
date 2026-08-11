@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class ProjectsComponent {
   constructor(public dialog: MatDialog) {}
-  projects: Project[] = [
+  softwareProjects = [
     {
       name: 'Big Tree World',
       description: `
@@ -22,11 +22,28 @@ export class ProjectsComponent {
       buttons: [{
         textOrIcon: 'Visit',
         action: () => {
-          window.open('http://bigtreeworld.com', '_blank');
+          window.open('https://bigtreeworld.com', '_blank');
         },
         isIconButton: false,
       }],
     },
+    {
+      name: 'angular-last-fm-scrobbles',
+      description: `
+        Last fm scrobbles widget for Angular.
+      `,
+      color1: '#003151',
+      color2: '#0F52BA',
+      buttons: [{
+        textOrIcon: 'See on npm',
+        action: () => {
+          window.open('https://www.npmjs.com/package/angular-last-fm-scrobbles', '_blank');
+        },
+        isIconButton: false,
+      }],
+    },
+  ];
+  projects: Project[] = [
     {
       name: 'TEDxYYC',
       description: `
